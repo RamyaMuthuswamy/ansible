@@ -21,7 +21,7 @@ aws configure -> configure the credentials of aws account
    gather_facts: false
    tasks:
    - name: Launching ec2 instance with ec2 module
-     ec2:
+     ec2_instance:
       instance_type: t2.micro
       image: ami-0fb653ca2d3203ac1
       region: us-east-2
