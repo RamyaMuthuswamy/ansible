@@ -39,7 +39,6 @@
     register: result
     ignore_errors: yes 
 
-  - name: Deploy missing info.html file to the respective nodes
-    copy: src=files/info.html dest=/var/www/html/info.html
-    when: result|failed
+  - debug: var=result
+
 
