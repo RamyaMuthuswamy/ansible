@@ -5,8 +5,12 @@
       package:
         name: nginx
         state: present
-      notify: Start nginx
+    - name: copy nginx config file
+      copy: src=./config/default dest=/etc/nginx/sites-available/
+      notify:
+        - Start nginx
   handlers:
+    - debug: this is example  
     - name: Start nginx
       service:
         name: nginx
