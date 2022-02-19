@@ -5,7 +5,7 @@ echo "Hello World.!" > encrpyt_me.txt
    ansible-vault encrypt encrpyt_me.txt
    cat encrpyt_me.txt
     ansible-vault view encrpyt_me.txt
-    cat encrpyt_me.txtx
+    cat encrpyt_me.txt
     ansible-vault edit encrpyt_me.txt
     cat encrpyt_me.txt
     ansible-vault rekey encrpyt_me.txt
