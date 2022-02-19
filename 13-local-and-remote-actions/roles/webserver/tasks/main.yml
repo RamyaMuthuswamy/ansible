@@ -1,5 +1,7 @@
 ---
 # tasks file for webserver
+- include: local-action.yaml
+
 - name: Install HTTPD Packages 
   yum: name=httpd state=present
   when: ansible_os_family == "RedHat" 
@@ -40,14 +42,15 @@
   shell: 'netstat -tulnp | grep -i {{http_port}}'
 
 
-
 - name: Check the Web file
   command: ls {{doc_root}}/info.html
   register: result
   ignore_errors: yes 
 
-  
-
 
 - name: Deploy missing info.html file to the respective nodes
   template: src=templates/info.j2 dest={{doc_root}}/info.html
+
+
+
+- include: remote-action.yaml
