@@ -10,7 +10,6 @@
       notify:
         - Start nginx
   handlers:
-    - debug: this is example  
     - name: Start nginx
       service:
         name: nginx

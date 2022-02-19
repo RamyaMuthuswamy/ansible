@@ -51,7 +51,7 @@
     copy: src=files/index.html dest={{doc_root}}/index.html
     notify:
       - Restart Apache
-      - test
+      - echo
   
   - name: Install netstat
     apt: name=net-tools state=present 
@@ -80,7 +80,7 @@
   handlers:
   - name: Restart Apache
     service: name=apache2 state=restarted
-  - name: amit
+  - name: echo
     shell: 'echo "Hello Handlers {{ansible_hostname}}" >> /tmp/handler.txt'
 
 
