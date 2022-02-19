@@ -3,7 +3,7 @@
   gather_facts: false
   tasks:
   - name: Launching ec2 instance with ec2 module
-    ec2-instance:
+    ec2_instance:
      name: testing
      instance_type: t2.micro
      image_id: ami-0fb653ca2d3203ac1
