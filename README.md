@@ -3,19 +3,18 @@
 1) 00-setup-ansible
 2) 01-ec2-provision
 3) 02-adhoc-commands
-4) 04-ansible-config
-5) 05-modules
-6) 06-facts
-7) 07-playbooks
-8) 08-playbook logic
-9) 09-templates
-10) 10-variable
-11) 11-Handlers
-12) 12-Roles
-13) 13-Local and remote Action
-14) 14-Pre and Post tasks
-15) 15-Tags
-16) 16-Galaxy
-17) 17-Serials
-18) 18-vault
-19) 19-Tower or AWX
+4) 03-ansible-config
+5) 04-modules
+6) 05-facts
+7) 06-playbooks
+8) 07-playbook logic
+9) 08-templates
+10) 09-variable
+11) 10-Handlers
+12) 11-meta
+13) 12-Roles
+14) 13-Local and remote Action
+15) 14-Pre and Post tasks
+16) 15-Intro to vault
+17) 16-Ansible vault
+ 
