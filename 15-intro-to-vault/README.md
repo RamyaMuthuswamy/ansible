@@ -2,7 +2,6 @@
 
 echo "Hello World.!" > encrpyt_me.txt
    cat encrpyt_me.txt
-   ansible-vault encrypy encrpyt_me.txt
    ansible-vault encrypt encrpyt_me.txt
    cat encrpyt_me.txt
     ansible-vault view encrpyt_me.txt
