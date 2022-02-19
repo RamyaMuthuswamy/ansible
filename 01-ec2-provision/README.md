@@ -5,7 +5,7 @@ We will create/provision a new ec2 instance using ansible in aws
 ### Install python and boto and boto3 and awscli and configure awscli
 
 ```
-
+sudo apt install python3-pip
 sudo pip install boto boto3
 sudo pip install awscli
 aws configure -> configure the credentials of aws account  
