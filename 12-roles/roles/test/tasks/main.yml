@@ -1,0 +1,8 @@
+---
+# tasks file for test
+#
+
+  - name: pull an image
+    docker_image:
+       name: gaje85/springbootdockerdemo
+       source: pull
