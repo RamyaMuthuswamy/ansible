@@ -1,4 +1,4 @@
-- hosts: web
+- hosts: ec2-instance
   tasks:
   - name: Install Apache Packages
     apt: name=apache2 state=present 
