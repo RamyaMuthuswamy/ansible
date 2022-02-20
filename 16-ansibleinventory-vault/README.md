@@ -10,7 +10,7 @@ When we run the playbook with encrypted inventory file we will get an error
 
 Run the playbook using the below options
 
-ansibleplaybook playbook.yml -i inventory -ask-vault-pass
+ansible-playbook playbook.yml -i inventory -ask-vault-pass
 
 If we store the password in a file then use the below option to run 
 
