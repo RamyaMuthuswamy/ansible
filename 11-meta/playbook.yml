@@ -75,7 +75,9 @@
   
   - name: Deploy missing info.html file to the respective nodes
     template: src=templates/info.j2 dest={{doc_root}}/info.html
-
+ 
+  - name: force to call handlers
+    meta: flush_handlers
 
   handlers:
   - name: Restart Apache

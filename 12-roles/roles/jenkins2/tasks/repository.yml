@@ -1,0 +1,29 @@
+# tasks file
+---
+- name: repository | install | dependencies (pre)
+  apt:
+    name: "{{ jenkins_dependencies_pre }}"
+    state: "{{ apt_install_state | default('latest') }}"
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+  tags:
+    - jenkins-repository-install
+    - jenkins-repository-install-dependencies
+
+- name: repository | add public key
+  apt_key:
+    id: FCEF32E745F2C3D5
+    url: https://pkg.jenkins.io/debian/jenkins.io.key
+    state: present
+  tags:
+    - jenkins-repository-public-key
+
+- name: repository | add repository
+  apt_repository:
+    repo: "{{ item.type }} {{ item.url }} {{ item.component }}"
+    state: present
+    update_cache: true
+    mode: 0644
+  with_items: "{{ jenkins_repositories }}"
+  tags:
+    - jenkins-repository-repository

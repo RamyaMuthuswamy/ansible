@@ -4,3 +4,5 @@
   roles:
   - firewall
   - server-common
+  - test
+  - jenkins2

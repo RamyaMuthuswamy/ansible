@@ -1,0 +1,4 @@
+---
+# vars file for test
+#
+image: gaje85/springbootdockerdemo
